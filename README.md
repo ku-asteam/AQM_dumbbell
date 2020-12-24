@@ -1,8 +1,7 @@
-TCPGuiTester - Application for logging and tracing tcp flows in real time with visualizing Graph.
+Mininet-based Dumbbell topology Emulator and Analyzer for AQM router
 ================================================================================
 
-Application for logging the throughput, RTT, cwnd in real time.
-!
+Mininet-based dummbell topology which supports the AQM routers and ECN hosts
 [!GuiTester screenshot](figure.png)
 
 
@@ -15,14 +14,19 @@ This application uses tcplog and tcpinfo
 
 Requirements
 --------------------------------------------------------------------------------
-1) Java (JDK)  >> apt-get install openjdk-11-jdk
-2) tcplog      >> git clone https://git.scc.kit.edu/CPUnetLOG/TCPlog (required git)
-3) yad 	       >> apt-get install yad
-4) tcpinfo     >> apt-get install python3 python3-pip
-               >> pip3 install tcpinfo   (Reboot required)
+1) python-pip	>> apt-get install python-pip
+2) mininet	>> apt-get install mininet
+3) ethtool	>> apt-get ethtool
+4) moreutils	>> apt-get netcat
+5) python	>> apt-get install python
+6) dpkt		>> pip install dpkt==1.9.1
+7) numpy	>> pip install numpy==1.14.0
+8) matplotlib	>> pip install matplotlib==2.1.1
 
-	You can install them using 'install.sh' shell script
+	You can install all of them using 'install.sh' shell script
 	ex>  sudo ./install.sh
+	
+9) Only Reno and CUBIC congestion control algorithms can be used in the Linux kernel for general distribution. Therefore, If you want to perform an experiment using various congestion control algorithms, you should compile and add the congestion control you want to test in the form of a kernel module, or download the full Linux kernel from the web site and install the congestion control you want to add. 
 
 Running
 --------------------------------------------------------------------------------
