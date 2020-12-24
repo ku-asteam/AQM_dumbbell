@@ -43,7 +43,7 @@ Running
 <Execution>
 Usage: run_mininet.py [-h] [-b RATE] [-l LIMIT_BYTE] [-r DELAY] [-d DURATION] [-n OUTPUT] [-q QDISC] [-c HOST] [-e MY_ECN] [-p LOSS] [-i INTERVAL]
 
--h: [help]		show the help message and exit
+-h: [help]		show the help message and exit\n
 -b: [BtlBw]		bottleneck bandwidth in Mbps (default: 10 Mbps]
 -l: [limit]		bottleneck buffer size in byte (default: 25000b)
 -r: [router delay]	Initial delay between switch 1 and switch 2 (default: 0ms)
