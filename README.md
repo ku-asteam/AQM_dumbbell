@@ -15,7 +15,9 @@ Based on
 --------------------------------------------------------------------------------
 This emulator is written by Python and can be executed on the linux supported mininet`
 
-- [run_mininet.py](https://github.com/syj5385/bbr_dumbbell/blob/master/run_mininet.py)
+- [run_mininet.py](https://github.com/syj5385/bbr_dumbbell/blob/master/run_mininet.py): This file was fully configured by the author to configure the dumbbell topology and perform the experiment where the senders transmits bulk data to the receivers
+
+- [analyze.py](https://github.com/syj5385/bbr_dumbbell/blob/master/analyze.py): This file was fully implemented by the J. Aulbach, to analyze the pcap file and plot the results in pdf. 
 
 Requirements
 --------------------------------------------------------------------------------
