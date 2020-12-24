@@ -47,19 +47,19 @@ Usage: run_mininet.py [-h] [-b RATE] [-l LIMIT_BYTE] [-r DELAY] [-d DURATION] [-
 -b: [BtlBw]		bottleneck bandwidth in Mbps (default: 10 Mbps]    
 -l: [limit]		bottleneck buffer size in byte (default: 25000b)    
 -r: [router delay]	Initial delay between switch 1 and switch 2 (default: 0ms)    
--d: [duration]		Test duration in second (default: 10 sec)
--n: [output]		The name of output directory (default: Congctl)
--q: [Qdisc]		Configuring Active Queue management; netem, CoDel, FQ_CoDel, RED etc..
-			e.g.	'': no AQM
-				'codel [limit PACKETS] [target TIME] [interval TIME] [ecn | noecn] [ce_threshold TIME]': Set CoDel
--c: [CCA Host]		Set sending host
-			e.g.	cubic:10ms,cubic:10ms -> 2 cubic host with 10ms access delay
-				bbr:10ms,cubic:30ms -> 1 bbr host with 10ms access round-trip delay and 1 cubic host with 30ms access round-trip delay
--e: [ECN]		Activation of ECN in sending host (default: 1)
-			1: enable
-			0: disable
--p: [LOSS]		set packet loss rate in percentage (default: 0)
--i: [host interval]	set the interval when multiple flows enter the bottleneck link if the number of flows is larger than 1 (default: 0) 
+-d: [duration]		Test duration in second (default: 10 sec)    
+-n: [output]		The name of output directory (default: Congctl)    
+-q: [Qdisc]		Configuring Active Queue management; netem, CoDel, FQ_CoDel, RED etc..    
+			e.g.	'': no AQM    
+				'codel [limit PACKETS] [target TIME] [interval TIME] [ecn | noecn] [ce_threshold TIME]': Set CoDel    
+-c: [CCA Host]		Set sending host    
+			e.g.	cubic:10ms,cubic:10ms -> 2 cubic host with 10ms access delay    
+				bbr:10ms,cubic:30ms -> 1 bbr host with 10ms access round-trip delay and 1 cubic host with 30ms access round-trip delay    
+-e: [ECN]		Activation of ECN in sending host (default: 1)    
+			1: enable    
+			0: disable    
+-p: [LOSS]		set packet loss rate in percentage (default: 0)    
+-i: [host interval]	set the interval when multiple flows enter the bottleneck link if the number of flows is larger than 1 (default: 0)     
 
 <Analyze>
 python analyze.py [-d OUTPUT_DIRECTORY]
@@ -84,11 +84,11 @@ python analyze.py [-d OUTPUT_DIRECTORY]
 <Example> 
 python run_mininet.py -b 50 -l 62500 -d 20 -n test -q '' -c cubic:10ms -e 0 -p 0
 
-+++++++++	+++++++++	+++++++++	+++++++++	+++++++++
-+	+++++++++	+++++++++	+  Btl	+	+++++++++	+
-+ CUBIC	+++++++++  S1	+++++++++  S2	+++++++++  S3	+++++++++  Recv +
-+	+++++++++	+++++++++	+  50M	+	+++++++++	+	
-+++++++++	+++++++++	+++++++++	+++++++++	+++++++++
++++++++++	+++++++++	+++++++++	+++++++++	+++++++++    
++	+++++++++	+++++++++	+  Btl	+	+++++++++	+    
++ CUBIC	+++++++++  S1	+++++++++  S2	+++++++++  S3	+++++++++  Recv +    
++	+++++++++	+++++++++	+  50M	+	+++++++++	+	    
++++++++++	+++++++++	+++++++++	+++++++++	+++++++++    
    10ms  			TailDrop
   delay
 
