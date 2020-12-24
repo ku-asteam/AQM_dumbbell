@@ -4,13 +4,18 @@ Mininet-based Dumbbell topology Emulator and Analyzer for AQM router
 Mininet-based dummbell topology which supports the AQM routers and ECN hosts
 referred to [measurement-framework](https://gitlab.lrz.de/tcp-bbr/measurement-framework) configured by J. Aulbach.
 
+  1) This emluation allows the bottleneck router to support active queue management (AQM) scheduler that the host provides such as Taildrop [CoDel](https://man7.org/linux/man-pages/man8/tc-codel.8.html), [RED](https://man7.org/linux/man-pages/man8/tc-red.8.html), [FQ_CoDel](https://man7.org/linux/man-pages/man8/tc-fq_codel.8.html) and so on.
+
+  2) This emulation enables the sender to support ECN feedback with simple option activation.
+
+  3) Additionally, this emulator fully support BBRv2 congestion control algorithm introduced by Google. Therefore, if you install the BBR v2 algorithm in the linux kernel and use it, this emulator provides the traced result in .xls files for each BBRv2 hosts.
+
 
 Based on
 --------------------------------------------------------------------------------
-TCPGuiTester is written by Java and executed on GNU/Linux 4.x
+This emulator is written by Python and can be executed on the linux supported mininet`
 
-This application uses tcplog and tcpinfo
-
+- [run_mininet.py](https://github.com/syj5385/bbr_dumbbell/blob/master/run_mininet.py)
 
 Requirements
 --------------------------------------------------------------------------------
