@@ -2,7 +2,7 @@ Mininet-based Dumbbell topology Emulator and Analyzer for AQM router
 ================================================================================
 
 Mininet-based dummbell topology which supports the AQM routers and ECN hosts
-[!GuiTester screenshot](figure.png)
+referred to [measurement-framework](https://gitlab.lrz.de/tcp-bbr/measurement-framework) configured by J. Aulbach.
 
 
 Based on
