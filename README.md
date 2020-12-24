@@ -37,10 +37,10 @@ Requirements
 
 Running
 --------------------------------------------------------------------------------
-<Installation>
+**<Installation>**
 1) ./install.sh
 
-<Execution>
+**<Execution>**
 Usage: run_mininet.py [-h] [-b RATE] [-l LIMIT_BYTE] [-r DELAY] [-d DURATION] [-n OUTPUT] [-q QDISC] [-c HOST] [-e MY_ECN] [-p LOSS] [-i INTERVAL]
 
 -h: [help]		show the help message and exit    
@@ -61,34 +61,25 @@ Usage: run_mininet.py [-h] [-b RATE] [-l LIMIT_BYTE] [-r DELAY] [-d DURATION] [-
 -p: [LOSS]		set packet loss rate in percentage (default: 0)    
 -i: [host interval]	set the interval when multiple flows enter the bottleneck link if the number of flows is larger than 1 (default: 0)     
 
-<Analyze>
+**<Analyze>**
 python analyze.py [-d OUTPUT_DIRECTORY]
 
-<Result File>
- Congctl_MMdd_HHmmSS
- |
- +-- 10.1.0.#.bbr:	 The traced result in BBR
- |
- +-- s1.pcap / s3.pcapa: The packet captured in switch 1 and 3
- |
- +-- s2-eth2-tbf.buffer: Buffer backlog in bottleneck link 
- |
- +-- csv_data
- |   |
- |   +-- *.csv: The results for each sending host
- |
- +-- pdf_plots
-     |
-     +-- plt_complete.pdf: The plot for sending hosts
+**<Result File>**
+ Congctl_MMdd_HHmmSS    
+ |    
+ +-- 10.1.0.#.bbr:	 The traced result in BBR    
+ |    
+ +-- s1.pcap / s3.pcapa: The packet captured in switch 1 and 3    
+ |    
+ +-- s2-eth2-tbf.buffer: Buffer backlog in bottleneck link     
+ |    
+ +-- csv_data    
+ |   |    
+ |   +-- *.csv: The results for each sending host    
+ |    
+ +-- pdf_plots    
+     |    
+     +-- plt_complete.pdf: The plot for sending hosts    
 
-<Example> 
+**<Example>**
 python run_mininet.py -b 50 -l 62500 -d 20 -n test -q '' -c cubic:10ms -e 0 -p 0
-
-+++++++++	+++++++++	+++++++++	+++++++++	+++++++++    
-+	+++++++++	+++++++++	+  Btl	+	+++++++++	+    
-+ CUBIC	+++++++++  S1	+++++++++  S2	+++++++++  S3	+++++++++  Recv +    
-+	+++++++++	+++++++++	+  50M	+	+++++++++	+	    
-+++++++++	+++++++++	+++++++++	+++++++++	+++++++++    
-   10ms  			TailDrop
-  delay
-
