@@ -43,10 +43,10 @@ Running
 <Execution>
 Usage: run_mininet.py [-h] [-b RATE] [-l LIMIT_BYTE] [-r DELAY] [-d DURATION] [-n OUTPUT] [-q QDISC] [-c HOST] [-e MY_ECN] [-p LOSS] [-i INTERVAL]
 
--h: [help]		show the help message and exit\n
--b: [BtlBw]		bottleneck bandwidth in Mbps (default: 10 Mbps]
--l: [limit]		bottleneck buffer size in byte (default: 25000b)
--r: [router delay]	Initial delay between switch 1 and switch 2 (default: 0ms)
+-h: [help]		show the help message and exit    
+-b: [BtlBw]		bottleneck bandwidth in Mbps (default: 10 Mbps]    
+-l: [limit]		bottleneck buffer size in byte (default: 25000b)    
+-r: [router delay]	Initial delay between switch 1 and switch 2 (default: 0ms)    
 -d: [duration]		Test duration in second (default: 10 sec)
 -n: [output]		The name of output directory (default: Congctl)
 -q: [Qdisc]		Configuring Active Queue management; netem, CoDel, FQ_CoDel, RED etc..
